@@ -4,7 +4,7 @@ import urllib.request
 ##Loading json response of photos
 def get_photos(url):
     response = urllib.request.urlopen(url)
-    photo_albums = json.loads(response.read())
+    photo_albums = json.load(response)
     return photo_albums
 
 ##Grabbing all albums based off albumID and finding max album number
